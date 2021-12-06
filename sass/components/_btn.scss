@@ -1,11 +1,13 @@
 .btn{
     background: rgb(255,121,218);
-background: -moz-linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(186,98,219,1) 100%);
-background: -webkit-linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(186,98,219,1) 100%);
-background: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(186,98,219,1) 100%);
+    background: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(186,98,219,1) 100%);
     padding: 20px;
     color: #FFF;
     font-family: "Roboto";
     text-decoration: none;
     border-radius: 50px;
+    transition: 500ms;
+    &:hover {
+        background: linear-gradient(180deg, rgba(186,98,219,1) 0%, rgba(255,121,218,1) 100%);
+      }
 }

@@ -9,7 +9,6 @@
   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&family=Shrikhand&display=swap');
 
 .container{
-    max-width: 375px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -23,12 +22,7 @@ p{
     font-family: "Roboto";
 }
 
-.onboarding{
-    &-list{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-   
-}
 
+footer{
+    background-color: #353535;
+}
