@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&family=Shrikhand&display=swap");
 .btn {
   background: #ff79da;
   background: linear-gradient(180deg, #ff79da 0%, #ba62db 100%);
@@ -11,15 +11,6 @@
 }
 .btn:hover {
   background: linear-gradient(180deg, #ba62db 0%, #ff79da 100%);
-}
-
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 65px;
-  position: relative;
-  box-shadow: 0 5px 2px -1px #5651511f;
 }
 
 .location {
@@ -45,6 +36,23 @@ header {
 }
 .hero h1 {
   margin: 0;
+  font-size: 2.5em;
+}
+@media (max-width: 768px) {
+  .hero h1 {
+    width: 220px;
+    font-size: 1.5em;
+  }
+}
+.hero p {
+  font-weight: 300;
+  font-size: 1.6em;
+}
+@media (max-width: 768px) {
+  .hero p {
+    width: 280px;
+    font-size: 1em;
+  }
 }
 
 .onboarding-list {
@@ -66,6 +74,7 @@ header {
   padding: 25px;
   border-radius: 10px;
   position: relative;
+  margin-bottom: 15px;
 }
 .onboarding-list_cards i {
   padding-right: 30px;
@@ -81,6 +90,11 @@ header {
   background-color: #9356DC;
   color: #fff;
   border-radius: 50%;
+}
+@media (max-width: 768px) {
+  .onboarding-list_cards .number {
+    left: -4%;
+  }
 }
 .onboarding-list_cards:hover {
   background-color: #f5edff;
@@ -101,8 +115,12 @@ header {
   background-color: #FFF;
   border-radius: 10px;
   width: 335px;
-  box-shadow: -2px 5px 16px -4px rgba(0, 0, 0, 0.75);
+  box-shadow: -2px 5px 16px -4px rgba(0, 0, 0, 0.301);
   margin-bottom: 2em;
+}
+.restaurants-card a {
+  text-decoration: none;
+  color: #000;
 }
 .restaurants-card img {
   width: 335px;
@@ -119,9 +137,23 @@ header {
   padding-left: 15px;
   padding-right: 20px;
 }
-
-footer .logofooter {
-  fill: #fff;
+.restaurants-content h2 {
+  margin: 0;
+  padding-top: 10px;
+}
+.restaurants-content p {
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+.restaurants-content_heart .fa-heart:hover::before {
+  content: "\f004";
+  background: -webkit-linear-gradient(13deg, #ff79da 0%, #ba62db 66%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.restaurants-content_heart i {
+  font-size: 1.3em;
 }
 
 * {
@@ -142,12 +174,37 @@ h1, h2 {
   font-weight: 700;
 }
 
-p {
+p, a {
   font-family: "Roboto";
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65px;
+  position: relative;
+  box-shadow: 0 5px 2px -1px #5651511f;
+}
+header a {
+  align-self: flex-start;
 }
 
 footer {
   background-color: #353535;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+footer .logofooter {
+  fill: #fff;
+}
+footer a {
+  color: #FFF;
+  text-decoration: none;
+}
+footer i {
+  padding-right: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
