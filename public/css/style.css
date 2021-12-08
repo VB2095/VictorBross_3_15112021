@@ -58,6 +58,8 @@
 .onboarding-list {
   display: flex;
   justify-content: space-evenly;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 @media (max-width: 992px) {
   .onboarding-list {
@@ -67,14 +69,14 @@
 }
 .onboarding-list_cards {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   background-color: #f6f6f6;
-  padding: 25px;
-  border-radius: 10px;
+  padding: 20px 35px 20px 35px;
+  border-radius: 20px;
   position: relative;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
+  font-weight: 700;
 }
 .onboarding-list_cards i {
   padding-right: 30px;
@@ -82,7 +84,8 @@
 }
 .onboarding-list_cards .number {
   position: absolute;
-  left: -8%;
+  left: 0;
+  transform: translate(-15px);
   width: 30px;
   height: 30px;
   text-align: center;
@@ -90,11 +93,6 @@
   background-color: #9356DC;
   color: #fff;
   border-radius: 50%;
-}
-@media (max-width: 768px) {
-  .onboarding-list_cards .number {
-    left: -4%;
-  }
 }
 .onboarding-list_cards:hover {
   background-color: #f5edff;
@@ -110,6 +108,8 @@
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  max-width: 860px;
+  margin: 0 auto;
 }
 .restaurants-card {
   background-color: #FFF;
@@ -117,6 +117,19 @@
   width: 335px;
   box-shadow: -2px 5px 16px -4px rgba(0, 0, 0, 0.301);
   margin-bottom: 2em;
+  position: relative;
+}
+.restaurants-card.new::after {
+  content: "Nouveau";
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-family: "Roboto";
+  font-weight: 700;
+  background-color: #99E2D0;
+  color: #008766;
+  padding: 10px;
+  border-radius: 2px;
 }
 .restaurants-card a {
   text-decoration: none;
@@ -143,8 +156,8 @@
 }
 .restaurants-content p {
   margin: 0;
-  padding-top: 10px;
-  padding-bottom: 20px;
+  padding-top: 5px;
+  padding-bottom: 15px;
 }
 .restaurants-content_heart .fa-heart:hover::before {
   content: "\f004";
@@ -167,6 +180,7 @@ body {
 .container {
   margin: 0 auto;
   padding: 20px;
+  max-width: 1920px;
 }
 
 h1, h2 {
@@ -187,21 +201,34 @@ header {
   box-shadow: 0 5px 2px -1px #5651511f;
 }
 header a {
-  align-self: flex-start;
+  position: absolute;
+  left: 20px;
+  color: #000;
 }
 
 footer {
   background-color: #353535;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  footer {
+    align-items: flex-start;
+  }
 }
 footer .logofooter {
-  fill: #fff;
+  color: #fff;
+  width: 120px;
+}
+footer .logofooter svg path {
+  fill: #FFF !important;
 }
 footer a {
   color: #FFF;
   text-decoration: none;
+  width: fit-content;
+  padding: 5px;
 }
 footer i {
   padding-right: 10px;
