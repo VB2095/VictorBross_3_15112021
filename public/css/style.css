@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&family=Shrikhand&display=swap");
 .btn {
   background: #ff79da;
   background: linear-gradient(180deg, #ff79da 0%, #ba62db 100%);
@@ -165,8 +166,74 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.restaurants-content_heart i {
-  font-size: 1.3em;
+
+.menu img {
+  width: 100%;
+  height: auto;
+  max-width: 1920px;
+  display: flex;
+  margin: 0 auto;
+}
+.menu-container {
+  background-color: #f6f6f6;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  transform: translate(0px, -60px);
+}
+.menu-container h1 {
+  font-family: "Shrikhand", cursive;
+}
+.menu-resto {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu-resto i {
+  font-size: 1.6em;
+  font-weight: 400;
+}
+.menu-categorie h2 {
+  text-transform: uppercase;
+  font-weight: 0;
+  font-size: 1.2em;
+}
+.menu-categorie h2::after {
+  content: "";
+  width: 50px;
+  height: 2px;
+  display: block;
+  position: absolute;
+  background-color: #99E2D0;
+}
+.menu-card {
+  background-color: #FFF;
+  border-radius: 20px;
+  padding: 15px 20px 0 10px;
+  margin-bottom: 15px;
+}
+.menu-card_title h3 {
+  font-family: "Roboto";
+  margin: 0;
+}
+.menu-card_title p {
+  margin: 0;
+  word-wrap: break-word;
+}
+.menu-card_text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu-btn {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 4em;
+}
+.menu-btn .btn {
+  display: block;
+  width: 100%;
+  max-width: 16em;
 }
 
 * {
@@ -232,6 +299,23 @@ footer a {
 }
 footer i {
   padding-right: 10px;
+}
+
+.fa-heart {
+  font-size: 1.3em;
+}
+.fa-heart:hover {
+  font-weight: 900;
+  color: transparent;
+  background: -webkit-linear-gradient(13deg, #ff79da 0%, #ba62db 66%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.fa-heart:focus {
+  color: transparent;
+  background: -webkit-linear-gradient(13deg, #ff79da 0%, #ba62db 66%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /*# sourceMappingURL=style.css.map */
