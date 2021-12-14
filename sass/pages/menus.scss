@@ -43,11 +43,43 @@
 }
 
 &-card{
+    animation: fadein 1s linear;
+    animation-fill-mode: both;
     background-color: #FFF;
     border-radius: 20px;
     padding: 15px 20px 0 10px;
     margin-bottom: 15px;
-    
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    &_validate{
+        position: absolute;
+        text-align: center;
+        right: -100px;
+        top: 0;
+        width: 100px;
+        height: 95px;
+        background-color: $color-greenmint;
+        transition: 1s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        i{
+            color: #FFF;
+            font-size: 1.5em;
+        }
+    }
+    &:hover{
+        .menu-card_validate{
+            right: 0px;
+            transition: 0.7s;
+            z-index: 2;
+            i{
+                animation: rotate 0.7s;
+            }
+        }
+        
+    }
     &_title{
         h3{
             font-family: 'Roboto';
@@ -78,3 +110,21 @@
 }
 }
 
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    
+    100%{
+        transform: rotate(360deg);
+    }
+}

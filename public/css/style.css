@@ -206,10 +206,40 @@
   background-color: #99E2D0;
 }
 .menu-card {
+  animation: fadein 1s linear;
+  animation-fill-mode: both;
   background-color: #FFF;
   border-radius: 20px;
   padding: 15px 20px 0 10px;
   margin-bottom: 15px;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+.menu-card_validate {
+  position: absolute;
+  text-align: center;
+  right: -100px;
+  top: 0;
+  width: 100px;
+  height: 95px;
+  background-color: #99E2D0;
+  transition: 1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu-card_validate i {
+  color: #FFF;
+  font-size: 1.5em;
+}
+.menu-card:hover .menu-card_validate {
+  right: 0px;
+  transition: 0.7s;
+  z-index: 2;
+}
+.menu-card:hover .menu-card_validate i {
+  animation: rotate 0.7s;
 }
 .menu-card_title h3 {
   font-family: "Roboto";
@@ -236,6 +266,22 @@
   max-width: 16em;
 }
 
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 * {
   box-sizing: border-box;
 }
