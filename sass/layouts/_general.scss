@@ -5,13 +5,27 @@
 
   body{
       margin: 0;
+      animation: fadein 0.8s linear;
+      position: relative;
   }
   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&family=Shrikhand&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&family=Shrikhand&display=swap');
 .container{
     margin: 0 auto;
     padding: 20px;
-    max-width: 1920px;
+    
+    
+}
+
+main{
+  animation: fadein 2s linear;
+  animation-delay: 2.5s;
+  animation-fill-mode: both;
+}
+
+.content{
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 h1, h2{
@@ -83,3 +97,25 @@ footer {
       -webkit-text-fill-color: transparent;
     }
    } 
+
+
+   .loader {
+    border: 10px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 10px solid $color-primary;
+    width: 120px;
+    height: 120px;
+    animation: rotate 1s linear infinite;
+    position: absolute; 
+    top: 15%;
+
+  }
+
+  .loaderout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeout 0.2s linear;
+    animation-delay: 2.5s;
+    animation-fill-mode: both;
+  }

@@ -1,5 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&family=Shrikhand&display=swap");
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    position: absolute;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .btn {
   background: #ff79da;
   background: linear-gradient(180deg, #ff79da 0%, #ba62db 100%);
@@ -120,6 +145,11 @@
   margin-bottom: 2em;
   position: relative;
 }
+@media (max-width: 768px) {
+  .restaurants-card {
+    width: 100%;
+  }
+}
 .restaurants-card.new::after {
   content: "Nouveau";
   position: absolute;
@@ -137,7 +167,7 @@
   color: #000;
 }
 .restaurants-card img {
-  width: 335px;
+  width: 100%;
   height: 175px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -169,8 +199,8 @@
 
 .menu img {
   width: 100%;
-  height: auto;
-  max-width: 1920px;
+  height: 30vh;
+  object-fit: cover;
   display: flex;
   margin: 0 auto;
 }
@@ -206,15 +236,16 @@
   background-color: #99E2D0;
 }
 .menu-card {
-  animation: fadein 1s linear;
   animation-fill-mode: both;
-  background-color: #FFF;
+  background-color: #fff;
   border-radius: 20px;
   padding: 15px 20px 0 10px;
   margin-bottom: 15px;
   position: relative;
   overflow: hidden;
   z-index: 0;
+  width: 100%;
+  box-shadow: -1px 6px 10px 2px rgba(166, 166, 166, 0.34);
 }
 .menu-card_validate {
   position: absolute;
@@ -228,18 +259,27 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.7s ease-in-out;
 }
 .menu-card_validate i {
-  color: #FFF;
+  color: #fff;
   font-size: 1.5em;
 }
 .menu-card:hover .menu-card_validate {
   right: 0px;
-  transition: 0.7s;
+  transition: 0.7s ease-in-out;
   z-index: 2;
 }
 .menu-card:hover .menu-card_validate i {
-  animation: rotate 0.7s;
+  animation: rotate 0.8s linear;
+}
+.menu-card_content {
+  width: 100%;
+  transition: 0.8s ease-in-out;
+}
+.menu-card_content:hover {
+  width: calc(100% - 100px);
+  transition: 0.7s ease-in-out;
 }
 .menu-card_title h3 {
   font-family: "Roboto";
@@ -254,6 +294,12 @@
   align-items: center;
   justify-content: space-between;
 }
+.menu-card_text div > p {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .menu-btn {
   display: flex;
   justify-content: center;
@@ -266,34 +312,50 @@
   max-width: 16em;
 }
 
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.entree {
+  margin-bottom: 2.25em;
+  animation: fadein 1s linear;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
 }
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+
+.plats {
+  margin-bottom: 2.25em;
+  animation: fadein 1s linear;
+  animation-delay: 1s;
+  animation-fill-mode: both;
 }
+
+.dessert {
+  animation: fadein 1s linear;
+  animation-delay: 1.5s;
+  animation-fill-mode: both;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
+  animation: fadein 0.8s linear;
+  position: relative;
 }
 
 .container {
   margin: 0 auto;
   padding: 20px;
-  max-width: 1920px;
+}
+
+main {
+  animation: fadein 2s linear;
+  animation-delay: 2.5s;
+  animation-fill-mode: both;
+}
+
+.content {
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 h1, h2 {
@@ -362,6 +424,26 @@ footer i {
   background: -webkit-linear-gradient(13deg, #ff79da 0%, #ba62db 66%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.loader {
+  border: 10px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 10px solid #9356DC;
+  width: 120px;
+  height: 120px;
+  animation: rotate 1s linear infinite;
+  position: absolute;
+  top: 15%;
+}
+
+.loaderout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeout 0.2s linear;
+  animation-delay: 2.5s;
+  animation-fill-mode: both;
 }
 
 /*# sourceMappingURL=style.css.map */

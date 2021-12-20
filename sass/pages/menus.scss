@@ -1,130 +1,148 @@
 .menu {
-    img {
-        width: 100%;
-        height: auto;
-        max-width: 1920px;
-        display: flex;
-        margin: 0 auto;
-      }
-  &-container{
+  img {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+    display: flex;
+    margin: 0 auto;
+  }
+  &-container {
     background-color: #f6f6f6;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     transform: translate(0px, -60px);
-    
-    h1{
-        font-family: 'Shrikhand', cursive;
+
+    h1 {
+      font-family: "Shrikhand", cursive;
     }
   }
-  &-resto{
+  &-resto {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
-    i{
-        font-size: 1.6em;
-        font-weight: 400;
-    }
-}
-&-categorie{
-    h2{
-        text-transform: uppercase;
-        font-weight: 00;
-        font-size: 1.2em;
-        &::after{
-            content: '';
-            width: 50px;
-            height: 2px;
-            display: block;
-            position: absolute;
-            background-color: $color-greenmint;
-        }
-    }
-}
 
-&-card{
-    animation: fadein 1s linear;
+    i {
+      font-size: 1.6em;
+      font-weight: 400;
+    }
+  }
+  &-categorie {
+   
+
+    h2 {
+      text-transform: uppercase;
+      font-weight: 00;
+      font-size: 1.2em;
+      &::after {
+        content: "";
+        width: 50px;
+        height: 2px;
+        display: block;
+        position: absolute;
+        background-color: $color-greenmint;
+      }
+    }
+  }
+
+  &-card {
+    
     animation-fill-mode: both;
-    background-color: #FFF;
+    background-color: #fff;
     border-radius: 20px;
     padding: 15px 20px 0 10px;
     margin-bottom: 15px;
     position: relative;
     overflow: hidden;
     z-index: 0;
-    &_validate{
-        position: absolute;
-        text-align: center;
-        right: -100px;
-        top: 0;
-        width: 100px;
-        height: 95px;
-        background-color: $color-greenmint;
-        transition: 1s;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        i{
-            color: #FFF;
-            font-size: 1.5em;
-        }
+    width: 100%;
+    box-shadow: -1px 6px 10px 2px rgb(166 166 166 / 34%);
+    &_validate {
+      position: absolute;
+      text-align: center;
+      right: -100px;
+      top: 0;
+      width: 100px;
+      height: 95px;
+      background-color: $color-greenmint;
+      transition: 1s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.7s ease-in-out;
+      i {
+        color: #fff;
+        font-size: 1.5em;
+      }
     }
-    &:hover{
-        .menu-card_validate{
-            right: 0px;
-            transition: 0.7s;
-            z-index: 2;
-            i{
-                animation: rotate 0.7s;
-            }
+    &:hover {
+      .menu-card_validate {
+        right: 0px;
+        transition: 0.7s ease-in-out;
+        z-index: 2;
+        i {
+          animation: rotate 0.8s linear;
         }
-        
+      }
     }
-    &_title{
-        h3{
-            font-family: 'Roboto';
-            margin: 0;
-        }
-        p{
-            margin: 0;
-            word-wrap: break-word;
-        }
-        
+    &_content{
+        width: 100%;
+        transition: 0.8s ease-in-out;
+       &:hover{
+        width: calc(100% - 100px);
+        transition: 0.7s ease-in-out;
+       }
     }
-    &_text{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+    &_title {
+      h3 {
+        font-family: "Roboto";
+        margin: 0;
+      }
+      p {
+        margin: 0;
+        word-wrap: break-word;
+      }
     }
-}
-&-btn{
+    &_text {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      
+     div>p{
+         width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      
+    }
+  }
+  &-btn {
     display: flex;
     justify-content: center;
     text-align: center;
     margin-top: 4em;
-    .btn{
-        display: block;
-        width: 100%;
-        max-width: 16em;
+    .btn {
+      display: block;
+      width: 100%;
+      max-width: 16em;
     }
-}
-}
-
-@keyframes fadein {
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
+  }
 }
 
-@keyframes rotate{
-    0%{
-        transform: rotate(0deg);
-    }
-    
-    100%{
-        transform: rotate(360deg);
-    }
+.entree{
+  margin-bottom: 2.25em;
+  animation: fadein 1s linear;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+}
+.plats{
+  margin-bottom: 2.25em;
+  animation: fadein 1s linear;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+}
+.dessert{
+  animation: fadein 1s linear;
+  animation-delay: 1.5s;
+  animation-fill-mode: both;
 }
