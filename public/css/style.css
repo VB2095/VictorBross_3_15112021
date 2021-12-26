@@ -268,13 +268,17 @@
   color: #fff;
   font-size: 1.5em;
 }
+.menu-card:hover {
+  cursor: pointer;
+}
 .menu-card:hover .menu-card_validate {
   right: 0px;
   transition: 0.7s ease-in-out;
   z-index: 2;
 }
 .menu-card:hover .menu-card_validate i {
-  animation: rotate 0.8s linear;
+  animation: rotate 0.4s linear;
+  animation-delay: 0.3S;
 }
 .menu-card_content {
   width: 100%;
@@ -287,17 +291,23 @@
 .menu-card_title h3 {
   font-family: "Roboto";
   margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu-card_title p {
   margin: 0;
   word-wrap: break-word;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu-card_text {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.menu-card_text div > p {
+.menu-card_text p:nth-child(1) {
   width: 100%;
   white-space: nowrap;
   overflow: hidden;

@@ -77,12 +77,14 @@
       }
     }
     &:hover {
+      cursor: pointer;
       .menu-card_validate {
         right: 0px;
         transition: 0.7s ease-in-out;
         z-index: 2;
         i {
-          animation: rotate 0.8s linear;
+          animation: rotate 0.4s linear;
+          animation-delay: 0.3S;
         }
       }
     }
@@ -98,10 +100,16 @@
       h3 {
         font-family: "Roboto";
         margin: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       p {
         margin: 0;
         word-wrap: break-word;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
     }
     &_text {
@@ -109,7 +117,7 @@
       align-items: center;
       justify-content: space-between;
       
-     div>p{
+     p:nth-child(1){
          width: 100%;
         white-space: nowrap;
         overflow: hidden;
