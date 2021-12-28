@@ -28,6 +28,7 @@
 .btn {
   background: #ff79da;
   background: linear-gradient(180deg, #ff79da 0%, #ba62db 100%);
+  box-shadow: 1px 11px 14px 0px rgba(130, 130, 130, 0.38);
   padding: 20px;
   color: #FFF;
   font-family: "Roboto";
@@ -36,7 +37,8 @@
   transition: 500ms;
 }
 .btn:hover {
-  background: linear-gradient(180deg, #ba62db 0%, #ff79da 100%);
+  background: linear-gradient(180deg, #ff99e2 0%, #dc7bff 100%);
+  box-shadow: 1px 11px 14px 0px rgba(109, 109, 109, 0.699);
 }
 
 .location {
@@ -428,12 +430,6 @@ footer i {
 }
 .fa-heart:hover {
   font-weight: 900;
-  color: transparent;
-  background: -webkit-linear-gradient(13deg, #ff79da 0%, #ba62db 66%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.fa-heart:focus {
   color: transparent;
   background: -webkit-linear-gradient(13deg, #ff79da 0%, #ba62db 66%);
   -webkit-background-clip: text;
