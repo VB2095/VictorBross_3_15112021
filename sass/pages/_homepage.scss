@@ -151,20 +151,6 @@
       padding-bottom: 15px;
     }
   }
-  &-content_heart{
-    .fa-heart{
-      &:hover{
-        &::before{
-          content: "\f004";
-          background:-webkit-linear-gradient(13deg, rgba(255,121,218,1) 0%, rgba(186,98,219,1) 66%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-        }
-      }
-      
-    }
-   
-   
-  }
+  
 }
 
